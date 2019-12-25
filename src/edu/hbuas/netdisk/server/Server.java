@@ -21,7 +21,7 @@ public class Server {
 	
 	public Server() {
 		try {
-			server=new ServerSocket(SocketConfig.serverPort);
+			server=new ServerSocket(SocketConfig.netDiskServerPort);
 			System.out.println("服务器已经启动");
 			
 			while(true) {
@@ -67,7 +67,7 @@ public class Server {
 					case UPLOAD:
 					{
 						System.out.println("用户当前是要执行上传文件操作");
-						File dir=new File("d:\\netdisk\\"+message.getFrom().getUsername());
+						File dir=new File(SocketConfig.serverStoreFileBasePath+message.getFrom().getUsername());
 						if(!dir.exists())dir.mkdirs();
 						
 						FileOutputStream  fileOut=new FileOutputStream(dir+"/"+message.getFilename());
