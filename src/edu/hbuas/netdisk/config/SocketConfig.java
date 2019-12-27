@@ -12,6 +12,6 @@ public interface SocketConfig {
 	public String jdbcUsername="root";
 	public String jdbcPassword="root";
 	public int netDiskServerPort=9999;
-	public String serverStoreFileBasePath="/Users/tengsir/newdiskserver2/";
+	public String serverStoreFileBasePath="D:/newdiskserver2/";
 
 }
